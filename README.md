@@ -1,21 +1,20 @@
-# MySQL-MyDrive-Online-Offline-Syncing-
+# MySQL-MyDrive-Online-Offline-Syncing
 Implementation of MyDrive (similar to Google Drive). Involves online and offline process
 
 Problem:
 You are asked to implement MyDride, the competition to Google Drive. The table, MyDrive, contains the information about the drive, in other words, the file system.
 
-The implementation contemplates two separate synchronization processes, one online and one offline. You, as the computer scientist and SQL expert, need to implement both processes. Hint: Synchronization means insert, update and delete.
+The implementation contemplates two separate synchronization processes, one online and one offline. You, as the computer scientist and SQL expert, need to implement both processes. 
 
-Offline process
 The offline process runs every time that the user connects its computer to the internet, populating MyDrive_Current_Status table. MyDrive_Current_Status has the same table structure as MyDrive. MyDrive_Current_Status will have the file system as it is at the time of connection. You need to implement a process to sync the table MyDrive based on the table MyDrive_Current_Status.
 
 
-Online process
+Online process:
 After writing the offline process, you will need to implement a trigger-based process to automate the synchronization in real-time. That means that every time that the file system gets changed, represented by MyDrive_Current_Status. MyDrive will be updated.
 
  
 
-Table definition
+Table definition:
 
 Create Table MyDrive(
 
@@ -29,7 +28,7 @@ Creation_date datetime,
 
 Mod_date datetime,
 
-Size bigint(20)
+Size bigint(20),
 
 PRIMARY KEY (inode_id),
 
